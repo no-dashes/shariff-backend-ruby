@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*', 'MIT-LICENSE']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'cuba', '~> 3.4.0'
-  s.add_dependency 'httpclient', '~> 2.6.0'
-  s.add_dependency 'rack-cache', '~> 1.2.0'
+  s.add_dependency 'cuba', '~> 3.8'
+  s.add_dependency 'httpclient', '~> 2.8', '>= 2.8.1'
+  s.add_dependency 'rack-cache', '~> 1.6', '>= 1.6.1'
 
-  s.add_development_dependency 'bundler', '~> 1.9.4'
+  s.add_development_dependency 'bundler', '~> 1.12.5'
   s.add_development_dependency 'rack-test', '~> 0.6.3'
   s.add_development_dependency 'cutest', '~> 1.2.2'
-  s.add_development_dependency 'rr', '~> 1.1.2'
-  s.add_development_dependency 'webmock', '~> 1.21.0'
+  s.add_development_dependency 'rr', '~> 1.2.0'
+  s.add_development_dependency 'webmock', '~> 2.1.0'
 end

@@ -20,10 +20,10 @@ group :development, :test do
     gem 'debase'
     gem 'ruby-debug-ide'
   else
-    gem 'pry-byebug', '~> 3.1.0'
+    gem 'pry-byebug'
     gem 'pry-stack_explorer'
   end
-  
+
   # git integration
   gem 'pry-git'
   # on-the-fly syntax highlighting
