@@ -4,7 +4,7 @@ require 'rack/cache'
 module ShariffBackend
   # Cuba/Rack application which routes the requests to the providers
   class App < ::Cuba
-    PROVIDERS = [Facebook, Twitter, GooglePlus, LinkedIn]
+    PROVIDERS = [Facebook, GooglePlus, LinkedIn]
 
     # TODO: make cache configurable
     use Rack::Cache,
