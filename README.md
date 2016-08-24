@@ -23,7 +23,7 @@ mount ShariffBackend::App, at: '/shariff'
 Visit `/shariff?url=www.example.com` to get a JSON structure containing the share counts:
 
 ```json
-{"facebook":321,"twitter":123,"googleplus":23}
+{"facebook":321,"googleplus":23}
 ```
 
 ### Option 2: Running it stand-alone (i.e. Heroku)
