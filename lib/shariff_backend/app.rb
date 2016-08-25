@@ -37,8 +37,12 @@ module ShariffBackend
 
     def all_provider_data(url)
       PROVIDERS.map do |provider|
-        [provider_name(provider), provider.count(url)]
+        [provider_name(provider), counts(provider, url)]
       end
+    end
+
+    def counts(provider, url)
+      self.class.settings[:disable_and_return] || provider.count(url)
     end
 
     define do
@@ -54,7 +58,7 @@ module ShariffBackend
         PROVIDERS.each do |provider|
           on provider_name(provider), param('url') do |url|
             verify_referrer
-            res.write(provider.count(url))
+            res.write(counts(provider, url))
           end
         end
       end
