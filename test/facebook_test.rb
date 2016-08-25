@@ -14,6 +14,7 @@ scope do
   end
 
   setup do
+    WebMock.enable!
     WebMock.disable_net_connect!
     stub_request(:get, %r{\Ahttps://api\.facebook\.com/method/fql\.query.+#{url_to_test}})
       .to_return(body: '[{"share_count": 123}]')

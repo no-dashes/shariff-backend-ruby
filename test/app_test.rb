@@ -18,6 +18,7 @@ class Cutest::Scope
 end
 
 setup do
+  Webmock.enable!
   WebMock.disable_net_connect!
 end
 

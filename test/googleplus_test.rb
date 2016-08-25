@@ -26,6 +26,7 @@ scope 'Google+' do
 EOS
 
   setup do
+    WebMock.enable!
     WebMock.disable_net_connect!
     stub_request(:get, %r{\Ahttps://plusone\.google\.com/.+#{url_to_test}\Z})
       .to_return(body: GOOGLE_FAKE_RESPONSE)
