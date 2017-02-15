@@ -15,6 +15,8 @@ module ShariffBackend
       json = JSON.parse(response.body)
       count = json['share']['share_count']
       count ? count : 0
+    rescue
+      0
     end
   end
 end
